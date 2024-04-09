@@ -1,0 +1,27 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "test:integration": "playwright test --ui",
+    "test:integration:ci": "playwright test",
+    "test:report": "c8 report -r cobertura -r lcovonly -r text",
+    "test:report:all": "c8 report --all -r cobertura -r lcovonly -r text"
+  },
+  "dependencies": {
+    "nuxt": "^3.11.2",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.40.1",
+    "@types/node": "^20.12.6",
+    "c8": "^9.1.0",
+    "playwright-test-coverage-native": "^0.2.0"
+  }
+}
